@@ -32,12 +32,7 @@ jobs:
       # with sigstore/fulcio when running outside of PRs.
       id-token: write
 
-    steps:
-      - name: Download jar
-        uses: actions/download-artifact@v3
-        with:
-          name: target-jar
-          
+    steps:         
       - name: Download workflow artifact (target-jar)
         # You may pin to the exact commit or the version.
         # uses: sidx1024/action-download-artifact@2fc832209443ba705b36587f5d305d0038533729
