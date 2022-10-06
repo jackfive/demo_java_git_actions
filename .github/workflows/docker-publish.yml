@@ -24,7 +24,6 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -34,6 +33,11 @@ jobs:
       id-token: write
 
     steps:
+      - name: Download jar
+        uses: actions/download-artifact@v3
+        with:
+          name: target-jar
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
